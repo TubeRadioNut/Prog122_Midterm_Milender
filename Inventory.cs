@@ -28,7 +28,7 @@ namespace Prog122_Midterm_Milender
             {
                 new Product("Black Tea", 2.75m),
                 new Product("Green Tea", 2.50m),
-                new Product("chai Tea", 3.00m)
+                new Product("Chai Tea", 3.00m)
             };
 
             _breakfastProducts = new List<Product>()

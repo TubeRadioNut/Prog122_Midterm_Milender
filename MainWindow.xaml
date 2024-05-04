@@ -30,7 +30,8 @@
                 Width="104"
                 Height="76"
                 FontSize="16"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnBrkfstSandwitch_Click" />
             <Button
                 x:Name="btnBrkfstPastry"
                 Content="Pastry"
@@ -41,7 +42,8 @@
                 FontSize="16"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnBrkfstPastry_Click" />
             <Button
                 x:Name="BrkfstFruit"
                 Content="Fruit"
@@ -52,9 +54,10 @@
                 FontSize="16"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="BrkfstFruit_Click" />
             <Button
-                x:Name="btnTeaLight"
+                x:Name="btnTeaBlack"
                 Content="Black"
                 Canvas.Left="10"
                 Canvas.Top="273"
@@ -63,7 +66,8 @@
                 FontSize="16"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnTeaBlack_Click" />
             <Button
                 x:Name="btnTeaGreen"
                 Content="Green"
@@ -74,7 +78,8 @@
                 FontSize="16"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnTeaGreen_Click" />
             <Button
                 x:Name="btnTeaChai"
                 Content="Chai"
@@ -85,7 +90,8 @@
                 FontSize="16"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnTeaChai_Click" />
             <Button
                 x:Name="btnCoffeeDark"
                 Content="Dark"
@@ -96,7 +102,8 @@
                 FontSize="16"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnCoffeeDark_Click" />
             <Button
                 x:Name="btnCoffeeMedium"
                 Content="Medium"
@@ -107,7 +114,8 @@
                 FontSize="16"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnCoffeeMedium_Click" />
             <Button
                 x:Name="btnCoffeeLight"
                 Content="Light"
@@ -118,7 +126,8 @@
                 FontSize="16"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnCoffeeLight_Click" />
             <Label
                 Content="Coffee"
                 Canvas.Left="10"
@@ -164,7 +173,8 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Width="284"
-                FontFamily="Arial Black" />
+                FontFamily="Arial Black"
+                Click="btnCompleteOder_Click" />
             <RichTextBox
                 Height="466"
                 Width="284"
@@ -236,7 +246,8 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 FontSize="18"
-                Background="#FFDDDDDD" />
+                Background="#FFDDDDDD"
+                SelectionChanged="cmbChooseOrder_SelectionChanged" />
         </Canvas>
 
     </Canvas>
