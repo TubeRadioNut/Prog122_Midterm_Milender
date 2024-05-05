@@ -168,20 +168,20 @@
                 x:Name="btnCompleteOder"
                 Content="Complete Oder"
                 Canvas.Left="20"
-                Canvas.Top="576"
+                Canvas.Top="491"
                 FontSize="16"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
                 Width="284"
                 FontFamily="Arial Black"
                 Click="btnCompleteOder_Click" />
             <RichTextBox
-                Height="466"
+                Height="406"
                 Width="284"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Canvas.Left="20"
-                Canvas.Top="93"
+                Canvas.Top="80"
                 FontSize="16"
                 Background="#FFDDDDDD">
                 <FlowDocument>
@@ -212,6 +212,24 @@
                 Width="179"
                 FontSize="18"
                 FontFamily="Arial Black" />
+            <ComboBox
+                x:Name="cmbChooseProductToRemove"
+                Canvas.Left="20"
+                Canvas.Top="556"
+                Width="284"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" />
+            <Button
+                x:Name="btnRemoveProduct"
+                Content="Remove Slected Product"
+                Canvas.Left="20"
+                Canvas.Top="529"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Width="284"
+                FontSize="16"
+                FontFamily="Arial Black"
+                Click="btnRemoveProduct_Click" />
         </Canvas>
         <Canvas
             Height="622"
@@ -241,13 +259,21 @@
             <ComboBox
                 x:Name="cmbChooseOrder"
                 Canvas.Left="20"
-                Canvas.Top="10"
+                Canvas.Top="40"
                 Width="284"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 FontSize="18"
                 Background="#FFDDDDDD"
                 SelectionChanged="cmbChooseOrder_SelectionChanged" />
+            <Label
+                Content="Completed Orders"
+                Canvas.Left="68"
+                Canvas.Top="4"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontFamily="Arial Black"
+                FontSize="18" />
         </Canvas>
 
     </Canvas>

@@ -66,6 +66,7 @@ namespace Prog122_Midterm_Milender
             decimal tax = _tax * 100;
             decimal totalTax = TotalTax(subtotal);
             decimal total = Total(subtotal);
+            int totalItems = 0;
 
             string formatString = "";
             formatString += $"Order Number: {_orderNumber}\n";
@@ -75,8 +76,11 @@ namespace Prog122_Midterm_Milender
 
             for (int i=0; i < _productInOrder.Count; i++)
             {
-                formatString += _productInOrder[i].ToString() ;
+                totalItems = i + 1;
+                formatString += _productInOrder[i].ToString();
+                
             }
+            formatString += $"Items in Order: {totalItems} \n";
             formatString += $"Subtotal: {subtotal:c}\n";
             formatString += $"Tax: {tax}% \n";
             formatString += $"Total Tax: {totalTax:c} \n";
