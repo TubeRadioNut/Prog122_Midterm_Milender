@@ -16,21 +16,33 @@ namespace Prog122_Midterm_Milender
         //Constructor
         public Inventory()
         {
-            //Initialize and Add 3 Predetermined Product items to each List
+            //Initialize and Add 9 Predetermined Product items to coffee products and tea products
             _coffeeProducts = new List<Product>()
             {
-                new Product("Dark Roast Coffee", 3.50m),
-                new Product("Medium Roast Coffee", 3.25m),
-                new Product("Light Roast Coffee", 3.00m)
+                new Product("Dark Roast Coffee: Small", 3.50m),
+                new Product("Dark Roast Coffee: Medium", 3.85m),
+                new Product("Dark Roast Coffee: Large", 4.20m),
+                new Product("Medium Roast Coffee: Small", 3.25m),
+                new Product("Medium Roast Coffee: Medium", 3.75m),
+                new Product("Medium Roast Coffee: Large", 3.90m),
+                new Product("Light Roast Coffee: Small", 3.00m),
+                new Product("Light Roast Coffee: Medium", 3.30m),
+                new Product("Light Roast Coffee: large", 3.60m)
             };
 
             _teaProducts = new List<Product>()
             {
-                new Product("Black Tea", 2.75m),
-                new Product("Green Tea", 2.50m),
-                new Product("Chai Tea", 3.00m)
+                new Product("Black Tea: Small", 2.75m),
+                new Product("Black Tea: Medium", 3.03m),
+                new Product("Black Tea: Large", 3.30m),
+                new Product("Green Tea: Samll", 2.50m),
+                new Product("Green Tea: Medium", 2.75m),
+                new Product("Green Tea: Large", 3.00m),
+                new Product("Chai Tea: Small", 3.00m),
+                new Product("Chai Tea: Medium", 3.30m),
+                new Product("Chai Tea: Large", 3.60m)
             };
-
+            //Initialize and Add 3 predetermined Product items
             _breakfastProducts = new List<Product>()
             {
                 new Product("Sandwich", 4.99m),

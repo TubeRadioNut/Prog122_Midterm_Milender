@@ -16,23 +16,16 @@ namespace Prog122_Midterm_Milender
 {
     public class Order
     {
-        //- Define a customers order.Will hold the customer name, the list of products they are buying, and calculations
         //Fields
-        string _orderNumber;
-        string _customerName;
-        decimal _tax;
-        List<Product> _productInOrder;
+        string _orderNumber;//Private field string to store oreder number 
+        string _customerName;//Private field string to store customer name
+        decimal _tax;//Private decimal to store tax rate
+        List<Product> _productInOrder;//Private List of product to store product in
 
-        //  _orderNumber : string
-        //  _productsInOrder : List<Product>
-        //_customerName : string
-        //_tax = decimal(you can set this to .1m to make it 10 percent
-
-
+        
         //Constructor
         //  public Order()
-        //Inside of the constructor set the _orderNumber to a random number between 10,000,000 and 100,000,000
-        //Inside of the constructor, initialize the _productsInOrder with a new List<Product>()
+        
         public Order()
         {
             //Generate a random order number between 10,000,000 and 100,000,000
@@ -40,42 +33,46 @@ namespace Prog122_Midterm_Milender
             _orderNumber = rand.Next(10000000, 100000000).ToString();
             //assign _tax .1
             _tax = .1m;
-            //Initialize our Product List
+            //Initialize Product List
             _productInOrder = new List<Product>();
         }
 
         //Properties
-        //Create a get for OrderNumber, ProductsInOrder, and CustomerName
-        //OrderNumber and ProductsInOrder should NOT have a set
         public string OrderNumber { get { return _orderNumber; } }
         public string CustomerName { get { return _customerName; } set { _customerName = value; } }
-        public List<Product> PorductInOrder { get { return _productInOrder; } }
+        public List<Product> ProductInOrder { get { return _productInOrder; } }
 
         //Method
-        //public void AddProduct(Product) : Create a method that takes a product and adds it to the instance ProductsInOrder.
+        //Create AddProduct() method for easier adding of product to List of product
         public void AddProduct (Product product)
         {
             _productInOrder.Add(product);
         }
 
-        //public string FormattedOrder() : Create a method that will create a string that has the user number, name, all the products
-        //they have ordered, and the product total summary.Example below.
+        //Create the FormattedOrder() method for how Order will be displayed
         public string FormattedOrder()
         {
+            //Create decimal variable, assign it the return of the Subtotal() method
             decimal subtotal = Subtotal();
+            //Create decimal variable, assign it the result of _tax times 100 
             decimal tax = _tax * 100;
+            //Create decimal variable, assign it the return of the TotalTax() method passing it subtotal
             decimal totalTax = TotalTax(subtotal);
+            //Create decimal variable, assign ti the return of the Total() method passing it subtotal
             decimal total = Total(subtotal);
+            //Create int variable, assing it 0 for displaying how many prducts are in the Order
             int totalItems = 0;
-
+            //Create string variable assing it no charaters
             string formatString = "";
+            //adding to string variable with various words and variables, and new lines
             formatString += $"Order Number: {_orderNumber}\n";
             formatString += $"Customer Name: {_customerName}\n";
             formatString += $"\n";
             formatString += $"--Products--\n";
-
+            //Loop through _productInzOrder List of products to display that list
             for (int i=0; i < _productInOrder.Count; i++)
             {
+                //reassign int variable to i plus one, this will be how many products are List of products
                 totalItems = i + 1;
                 formatString += _productInOrder[i].ToString();
                 
@@ -93,7 +90,7 @@ namespace Prog122_Midterm_Milender
         //the subtotal of the order
         public decimal Subtotal()
         {
-            //Loop through _productInOrder List adding Prodcut Prices
+            //Loop through _productInOrder List adding Prodcut Prices together
             decimal subtotal = 0;
             for(int i = 0; i < _productInOrder.Count; i++)
             {
@@ -120,6 +117,7 @@ namespace Prog122_Midterm_Milender
         //Creates override ToString() method that replaces default ToString() method
         public override string ToString()
         {
+            //format how customer name and order number will be displayed
             return $"{_customerName} - {_orderNumber}";
         }
 

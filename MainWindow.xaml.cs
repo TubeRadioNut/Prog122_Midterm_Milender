@@ -38,197 +38,393 @@ namespace Prog122_Midterm_Milender
             //initialize a new Order() named currentOrder
             currentOrder = new Order();
 
-            //Assign previousOrders to combo box ItemsSource
+            //Assign previousOrders to combo box to display completed orders
             cmbChooseOrder.ItemsSource = previousOrder;
 
             //Assign currentOrder Product list to combo box to remove product
-            cmbChooseProductToRemove.ItemsSource = currentOrder.PorductInOrder;
+            cmbChooseProductToRemove.ItemsSource = currentOrder.ProductInOrder;
+
             //Testing classes 
             //Product coffee = new Product("Dark", 3.50m);
             //Product tea = new Product("Black", 2.50m);
             //Order testOrder = new Order();
             //testOrder.AddProduct(inventory.CoffeeProducts[0]);
             //testOrder.AddProduct(inventory.TeaProducts[2]);
-
             //rtbDisplayCurrentOrder.Text = testOrder.FormattedOrder();
 
-        }//end of MainWindow
 
+        }//end of MainWindow
+        
+        //Create button click event for dark coffee button
         private void btnCoffeeDark_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
-            //Product coffeDark = inventory.CoffeeProducts[0];
-            currentOrder.AddProduct(inventory.CoffeeProducts[0]);
-            rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
-            cmbChooseProductToRemove.Items.Refresh();
+            //Creates bools for radio buttons
+            bool small = rbSmall.IsChecked.Value;
+            bool medium = rbMedium.IsChecked.Value;
+            bool large = rbLarge.IsChecked.Value;
+            //Testing which, if any, radio button is selected with if/else statements
+            if (small)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[0]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (medium)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[1]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if(large)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[2]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            //only get here if no radio button is selected
+            else
+            {
+                //Alert user to select a size
+                MessageBox.Show("Select a Size");
+            }
+            
         }
 
+        //Create button click event for medium coffee button
         private void btnCoffeeMedium_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
-            //Product coffeeMedium = inventory.CoffeeProducts[1];
-            currentOrder.AddProduct(inventory.CoffeeProducts[1]);
-            rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
-            cmbChooseProductToRemove.Items.Refresh();
+            //Creates bools for radio buttons
+            bool small = rbSmall.IsChecked.Value;
+            bool medium = rbMedium.IsChecked.Value;
+            bool large = rbLarge.IsChecked.Value;
+            //Testing which, if any, radio button is selected with if/else statements
+            if (small)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[3]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (medium)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[4]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (large)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[5]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            //only get here if no radio button is selected
+            else
+            {
+                //Alert user to select a size
+                MessageBox.Show("Select a Size");
+            }
         }
-
+        
+        //Create click event for light coffee button
         private void btnCoffeeLight_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
-            //Product coffeeLight = inventory.CoffeeProducts[2];
-            currentOrder.AddProduct(inventory.CoffeeProducts[2]);
-            rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
-            cmbChooseProductToRemove.Items.Refresh();
+            //Creates bools for radio buttons
+            bool small = rbSmall.IsChecked.Value;
+            bool medium = rbMedium.IsChecked.Value;
+            bool large = rbLarge.IsChecked.Value;
+            //Testing which, if any, radio button is selected with if/else statements
+            if (small)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[6]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (medium)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[7]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (large)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.CoffeeProducts[8]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            //only get here if no radio button is selected
+            else
+            {
+                //Alert user to select a size
+                MessageBox.Show("Select a Size");
+            }
         }
 
+        //Create click event for black tea button
         private void btnTeaBlack_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
-            //Product teaBlack = inventory.TeaProducts[0];
-            currentOrder.AddProduct(inventory.TeaProducts[0]);
-            rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
-            cmbChooseProductToRemove.Items.Refresh();
+            //Creates bools for radio buttons
+            bool small = rbSmall.IsChecked.Value;
+            bool medium = rbMedium.IsChecked.Value;
+            bool large = rbLarge.IsChecked.Value;
+            //Testing which, if any, radio button is selected with if/else statements
+            if (small)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[0]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (medium)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[1]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (large)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[2]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            //only get here if no radio button is selected
+            else
+            {
+                //Alert user to select a size
+                MessageBox.Show("Select a Size");
+            }
         }
 
+
+        //Create click event for green tea button
         private void btnTeaGreen_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
-            //Product teaGreen = inventory.TeaProducts[1];
-            currentOrder.AddProduct(inventory.TeaProducts[1]);
-            rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
-            cmbChooseProductToRemove.Items.Refresh();
+            //Creates bools for radio buttons
+            bool small = rbSmall.IsChecked.Value;
+            bool medium = rbMedium.IsChecked.Value;
+            bool large = rbLarge.IsChecked.Value;
+            //Testing which, if any, radio button is selected with if/else statements
+            if (small)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[3]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (medium)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[4]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (large)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[5]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            //only get here if no radio button is selected
+            else
+            {
+                //Alert user to select a size
+                MessageBox.Show("Select a Size");
+            }
         }
 
+        //Create click event for chai tea button
         private void btnTeaChai_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
-            //Product teaChai = inventory.TeaProducts[2];
-            currentOrder.AddProduct(inventory.TeaProducts[2]);
-            rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
-            cmbChooseProductToRemove.Items.Refresh();
+            //Creates bools for radio buttons
+            bool small = rbSmall.IsChecked.Value;
+            bool medium = rbMedium.IsChecked.Value;
+            bool large = rbLarge.IsChecked.Value;
+            //Testing which, if any, radio button is selected with if/else statements
+            if (small)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[6]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (medium)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[7]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            else if (large)
+            {
+                //Adding product from inventory class to current order List of products
+                currentOrder.AddProduct(inventory.TeaProducts[8]);
+                //display currentOrder List of products in rich text box
+                rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
+                //Refresh combo box for remove item
+                cmbChooseProductToRemove.Items.Refresh();
+            }
+            //only get here if NO radio button is selected
+            else
+            {
+                //Alert user to select a size
+                MessageBox.Show("Select a Size");
+            }
         }
 
+        //Creates click event for breakfast sandwich button
         private void btnBrkfstSandwitch_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
+            //Adding product from inventory class to current order List of products
+            //I am not sure why we did this in the midterm review , but it works both ways
             //Product brkfstSandwitch = inventory.BreakfastProducts[0];
             currentOrder.AddProduct(inventory.BreakfastProducts[0]);
+            //Display currentOder List of products in rich text box
             rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
+            //Refresh combo box for remove item
             cmbChooseProductToRemove.Items.Refresh();
         }
 
+        //Create click event for breakfast pastry button
         private void btnBrkfstPastry_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
+            //Adding product form invetory class to current order List of products
             //Product brkfstPasty = inventory.BreakfastProducts[1];
             currentOrder.AddProduct(inventory.BreakfastProducts[1]);
+            //Display currentOrder List of products in rich text box
             rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
+            //Refresh combo box for remove item
             cmbChooseProductToRemove.Items.Refresh();
         }
 
+        //Create click event for breakfast fruit button
         private void BrkfstFruit_Click(object sender, RoutedEventArgs e)
         {
-            //For every Product Button ( Dark, Green, Fruit, etc... )
-            //Add the selected product to the current order list ( use the .AddProduct(Product) method you created )
-            //Display the FormattedOrder() to the Rich Text Box for the current order
+            //Adding product from invetory class to current order List of products
             //Product brkfstFruit = inventory.BreakfastProducts[2];
             currentOrder.AddProduct(inventory.BreakfastProducts[2]);
+            //Display currentOrder List of products in rich text box
             rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
+            //Refesh combo box for remove item
             cmbChooseProductToRemove.Items.Refresh();
         }
 
+        //Create click event for complete order button
         private void btnCompleteOder_Click(object sender, RoutedEventArgs e)
         {
-            //Complete Order Button
             //Get user input for Name on currentOrder
             string customerName = txtCustomerName.Text;
-            //Check if there is a user name entered
+            //Create bool to check if there is a user name entered
             bool isNotEmpty = customerName.Length != 0;
+            //Create bool and assign it the return of AreProductsInOrder() method and call that method
             bool areProductsInOrder = AreProductsInOrder();
-
+            //Testing if there are products in the currentOrder List of products
             if (areProductsInOrder)
             {
-                //If true
-                //Refresh the combo box info with comboBoxName.Items.Refresh() // If it works you should see the last order appear
-                //in the drop down when you click on it
+                //testing if there is a Name entered for currentOrder
                 if (isNotEmpty)
                 {
-                    //Add name to order
+                    //Adding Name to currentOrder
                     currentOrder.CustomerName = customerName;
                     //Add current order to previous order list
                     previousOrder.Add(currentOrder);
-                    //Create a new instance of Order for currentOrder
+                    //Create a new instance of Order for currentOrder for next order
                     currentOrder = new Order();
-                    //Clear name box
+                    //Clear name text box
                     txtCustomerName.Text = "";
                     //Clear rich text box
                     rtbDisplayCurrentOrder.Text = "";
-                    //Refresh the combo box info with comboBoxName.Items.Refresh() // If it works you should see the last order appear
-                    //in the drop down when you click on it
+                    //Refesh combo box for completed orders updating it with updated previousOrder List of Orders
                     cmbChooseOrder.Items.Refresh();
 
                 }
-                //else
-                //Show a message box saying to enter a name
+                //only get here if NO Name is entered
+                //Alert user there is NO Name entered with MessageBox
                 else
                 {
                     MessageBox.Show("Enter Customer Name");
                 }
 
             }
+            //Only get here if there are NO products in currentOrder List of products
+            //Alert user there are NO products in the current order
             else
             {
-                MessageBox.Show("There are not Products in this order");
+                MessageBox.Show("There are no Products in this order");
             }
             
             
         }
 
+        //Create click event for combo box chooseOrder 
         private void cmbChooseOrder_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Combo Box Selection Changed Event
-            //When the user selects an order display the FormattedOrder() to the previous order Rich Text Box
+            //Creating Order variable, assign it selected item in combo box, make sure computer knows it is an Order
             Order selectedOrder = cmbChooseOrder.SelectedItem as Order;
+            //Display selcted order from combo box to rich text box previous orders
             rtbDisplayPreviousOrder.Text = selectedOrder.FormattedOrder();
         }
 
+        //Create click event for combo box remove product
         private void btnRemoveProduct_Click(object sender, RoutedEventArgs e)
         {
+            //Create an int variable and assign it the index of the selected prodcut from currentOrder List of products
             int selectedProduct = cmbChooseProductToRemove.SelectedIndex;
-
+            //Testing if user selected a product from combo box
             if (selectedProduct != -1)
             {
-                currentOrder.PorductInOrder.Remove(currentOrder.PorductInOrder[selectedProduct]);
-
+                //Remove selected product using built in Remove() method using int variable 
+                currentOrder.ProductInOrder.Remove(currentOrder.ProductInOrder[selectedProduct]);
+                //Display updated currentOrder List of products
                 rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
-
+                //Refresh combo box with updated cuurentOrder List of products
                 cmbChooseProductToRemove.Items.Refresh();
             }
+            //only get here if NO product is selected in combo box
+            //Alert user to select a product
             else
             {
                 MessageBox.Show("Select Product to Remove");
@@ -236,9 +432,12 @@ namespace Prog122_Midterm_Milender
 
         }
 
+        //Create AreProductsInOrder() method that returns a bool
         public bool AreProductsInOrder()
         {
-            bool areProcductsInOrder = currentOrder.PorductInOrder.Count != 0;
+            //Create bool variable and assign it the result of test ProductInOrder count not euqual to 0
+            bool areProcductsInOrder = currentOrder.ProductInOrder.Count != 0;
+            //return bool variable
             return areProcductsInOrder;
             
         }

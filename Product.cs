@@ -13,7 +13,7 @@ namespace Prog122_Midterm_Milender
         decimal _price;//private decimal field to store the price of our product
 
 
-        //Consstructor
+        //Constructor
         public Product(string productName, decimal price)
         {
             _productName = productName;
@@ -25,10 +25,12 @@ namespace Prog122_Midterm_Milender
         public decimal Price { get => _price; set => _price = value; }
 
         //Methods
-
+        //Create overrid ToString() method to replace default ToString() method
         public override string ToString()
         {
+            //Format how Product will be displayed
             return $"{_productName} - {_price:c} \n";
         }
     }//end of class
+
 }//end of namespace

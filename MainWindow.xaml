@@ -96,7 +96,7 @@
                 x:Name="btnCoffeeDark"
                 Content="Dark"
                 Canvas.Left="10"
-                Canvas.Top="74"
+                Canvas.Top="131"
                 Width="104"
                 Height="76"
                 FontSize="16"
@@ -108,11 +108,11 @@
                 x:Name="btnCoffeeMedium"
                 Content="Medium"
                 Canvas.Left="140"
-                Canvas.Top="74"
+                Canvas.Top="131"
                 Width="104"
                 Height="76"
                 FontSize="16"
-                HorizontalAlignment="Left"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 FontFamily="Arial Black"
                 Click="btnCoffeeMedium_Click" />
@@ -120,18 +120,18 @@
                 x:Name="btnCoffeeLight"
                 Content="Light"
                 Canvas.Left="270"
-                Canvas.Top="74"
+                Canvas.Top="131"
                 Width="104"
                 Height="76"
                 FontSize="16"
-                HorizontalAlignment="Left"
+                HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 FontFamily="Arial Black"
                 Click="btnCoffeeLight_Click" />
             <Label
                 Content="Coffee"
                 Canvas.Left="10"
-                Canvas.Top="35"
+                Canvas.Top="95"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
                 Width="78"
@@ -155,6 +155,39 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 FontFamily="Arial Black" />
+            <RadioButton
+                x:Name="rbSmall"
+                Content="Small"
+                Canvas.Left="10"
+                Canvas.Top="68"
+                FontFamily="Arial Black"
+                FontSize="18"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" />
+            <RadioButton
+                x:Name="rbMedium"
+                Content="Medium"
+                Canvas.Left="148"
+                Canvas.Top="68"
+                FontFamily="Arial Black"
+                FontSize="16"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" />
+            <RadioButton
+                x:Name="rbLarge"
+                Content="Large"
+                Canvas.Left="287"
+                Canvas.Top="68"
+                FontSize="16"
+                FontFamily="Arial Black"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top" />
+            <Label
+                Content="Beverage Size"
+                Canvas.Left="10"
+                Canvas.Top="32"
+                FontFamily="Arial Black"
+                FontSize="18" />
         </Canvas>
         <Canvas
             Height="622"
