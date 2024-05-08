@@ -359,8 +359,8 @@ namespace Prog122_Midterm_Milender
             string customerName = txtCustomerName.Text;
             //Create bool to check if there is a user name entered
             bool isNotEmpty = customerName.Length != 0;
-            //Create bool and assign it the return of AreProductsInOrder() method and call that method
-            bool areProductsInOrder = AreProductsInOrder();
+            //Create bool and assign it the result of test: current order list of Products count is not equal to 0
+            bool areProductsInOrder = currentOrder.ProductInOrder.Count != 0;
             //Testing if there are products in the currentOrder List of products
             if (areProductsInOrder)
             {
@@ -379,6 +379,14 @@ namespace Prog122_Midterm_Milender
                     rtbDisplayCurrentOrder.Text = "";
                     //Refesh combo box for completed orders updating it with updated previousOrder List of Orders
                     cmbChooseOrder.Items.Refresh();
+                    //Create int variable assign it the index of the last order added to the previousOrder List
+                    int indexAutoDisplay = previousOrder.Count - 1;
+                    //Display the last order added to the previousOrder List in the combo box and rich text box for completed order 
+                    cmbChooseOrder.SelectedIndex = indexAutoDisplay;
+                    //Clearing the combo box and assign it to the new instance of Order()
+                    cmbChooseProductToRemove.ItemsSource = currentOrder.ProductInOrder;
+                    //I thought this would clear the combo box since there is now no list in the currentOrder, but it did not work
+                    //cmbChooseProductToRemove.Items.Refresh();
 
                 }
                 //only get here if NO Name is entered
@@ -432,15 +440,6 @@ namespace Prog122_Midterm_Milender
 
         }
 
-        //Create AreProductsInOrder() method that returns a bool
-        public bool AreProductsInOrder()
-        {
-            //Create bool variable and assign it the result of test ProductInOrder count not euqual to 0
-            bool areProcductsInOrder = currentOrder.ProductInOrder.Count != 0;
-            //return bool variable
-            return areProcductsInOrder;
-            
-        }
     }//end of partial class
 
 
