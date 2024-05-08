@@ -96,8 +96,8 @@ namespace Prog122_Midterm_Milender
                 //Alert user to select a size
                 MessageBox.Show("Select a Size");
             }
-            
-        }
+
+        }//end of btnCoffeeDark_Click()
 
         //Create button click event for medium coffee button
         private void btnCoffeeMedium_Click(object sender, RoutedEventArgs e)
@@ -140,8 +140,8 @@ namespace Prog122_Midterm_Milender
                 //Alert user to select a size
                 MessageBox.Show("Select a Size");
             }
-        }
-        
+        }//end of btnCoffeeMedium_Click()
+
         //Create click event for light coffee button
         private void btnCoffeeLight_Click(object sender, RoutedEventArgs e)
         {
@@ -183,7 +183,7 @@ namespace Prog122_Midterm_Milender
                 //Alert user to select a size
                 MessageBox.Show("Select a Size");
             }
-        }
+        }//end of btnCoffeeLight_Click()
 
         //Create click event for black tea button
         private void btnTeaBlack_Click(object sender, RoutedEventArgs e)
@@ -226,7 +226,7 @@ namespace Prog122_Midterm_Milender
                 //Alert user to select a size
                 MessageBox.Show("Select a Size");
             }
-        }
+        }//end of btnTeaBlack_Click()
 
 
         //Create click event for green tea button
@@ -270,7 +270,7 @@ namespace Prog122_Midterm_Milender
                 //Alert user to select a size
                 MessageBox.Show("Select a Size");
             }
-        }
+        }//end of btnTeaGreen_Click
 
         //Create click event for chai tea button
         private void btnTeaChai_Click(object sender, RoutedEventArgs e)
@@ -313,7 +313,7 @@ namespace Prog122_Midterm_Milender
                 //Alert user to select a size
                 MessageBox.Show("Select a Size");
             }
-        }
+        }//end of btnTeaChai_Click()
 
         //Creates click event for breakfast sandwich button
         private void btnBrkfstSandwitch_Click(object sender, RoutedEventArgs e)
@@ -326,7 +326,7 @@ namespace Prog122_Midterm_Milender
             rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
             //Refresh combo box for remove item
             cmbChooseProductToRemove.Items.Refresh();
-        }
+        }//end of btnBrkfstSandwitch_Click()
 
         //Create click event for breakfast pastry button
         private void btnBrkfstPastry_Click(object sender, RoutedEventArgs e)
@@ -338,7 +338,7 @@ namespace Prog122_Midterm_Milender
             rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
             //Refresh combo box for remove item
             cmbChooseProductToRemove.Items.Refresh();
-        }
+        }//end of btnBrkfstPastry_Click()
 
         //Create click event for breakfast fruit button
         private void BrkfstFruit_Click(object sender, RoutedEventArgs e)
@@ -350,7 +350,7 @@ namespace Prog122_Midterm_Milender
             rtbDisplayCurrentOrder.Text = currentOrder.FormattedOrder();
             //Refesh combo box for remove item
             cmbChooseProductToRemove.Items.Refresh();
-        }
+        }//end of BrkfstFruit_Click()
 
         //Create click event for complete order button
         private void btnCompleteOder_Click(object sender, RoutedEventArgs e)
@@ -403,9 +403,9 @@ namespace Prog122_Midterm_Milender
             {
                 MessageBox.Show("There are no Products in this order");
             }
-            
-            
-        }
+
+
+        }//end of btnCompleteOder_Click()
 
         //Create click event for combo box chooseOrder 
         private void cmbChooseOrder_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -414,7 +414,7 @@ namespace Prog122_Midterm_Milender
             Order selectedOrder = cmbChooseOrder.SelectedItem as Order;
             //Display selcted order from combo box to rich text box previous orders
             rtbDisplayPreviousOrder.Text = selectedOrder.FormattedOrder();
-        }
+        }//end of cmbChooseOrder_SelectionChanged()
 
         //Create click event for combo box remove product
         private void btnRemoveProduct_Click(object sender, RoutedEventArgs e)
@@ -438,7 +438,7 @@ namespace Prog122_Midterm_Milender
                 MessageBox.Show("Select Product to Remove");
             }
 
-        }
+        }//end of btnRemoveProduct_Click()
 
     }//end of partial class
 
